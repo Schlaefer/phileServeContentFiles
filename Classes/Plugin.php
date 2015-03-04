@@ -54,6 +54,11 @@ class Plugin extends AbstractPlugin implements EventObserverInterface {
 			$dir = dirname($this->url);
 			$path = CONTENT_DIR . $dir . DS . $url;
 			if (!file_exists($path)) {
+				// check if URL 'foo' is actually 'foo/index'
+				$dir = basename($this->url);
+				$path = CONTENT_DIR . $dir . DS . $url;
+			}
+			if (!file_exists($path)) {
 				return $match[0];
 			}
 			$contentUrl = Utility::getBaseUrl() . "/content/$dir/" . $url;
