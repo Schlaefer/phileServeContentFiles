@@ -1,0 +1,15 @@
+{
+  "name": "siezi/phile-serve-content-files",
+  "type": "phile-plugin",
+  "license": "MIT",
+  "description": "Plugin for PhileCMS to serve files from the content/ directory",
+  "homepage": "https://github.com/Schlaefer/phileServeContentFiles",
+  "keywords": ["phile", "content"],
+  "require": {
+    "phile-cms/phile": ">=1.4",
+    "phile-cms/plugin-installer-plugin": ">=1"
+  },
+  "suggest": {
+    "siezi/phile-total-cache": "caching for improved performance"
+  }
+}
