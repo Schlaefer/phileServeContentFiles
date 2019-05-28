@@ -6,8 +6,11 @@
   "homepage": "https://github.com/Schlaefer/phileServeContentFiles",
   "keywords": ["phile", "content"],
   "require": {
-    "phile-cms/phile": ">=1.4",
-    "phile-cms/plugin-installer-plugin": ">=1"
+    "phile-cms/phile": "^1.11",
+    "phile-cms/plugin-installer-plugin": "^1.0 || dev-develop"
+  },
+  "require-dev": {
+      "phpunit/phpunit": "^7.0"
   },
   "suggest": {
     "siezi/phile-total-cache": "caching for improved performance"

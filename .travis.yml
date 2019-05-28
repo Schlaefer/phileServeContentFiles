@@ -1,0 +1,13 @@
+language: php
+php:
+    - '7.1'
+    - '7.2'
+    - '7.3'
+install:
+    # prefer source for required phpunit.xml
+    - composer install --prefer-source
+    - touch vendor/phile-cms/phile/lib/vendor/autoload.php
+    - mkdir -p vendor/phile-cms/phile/plugins/siezi/phileServeContentFiles
+    - find . -maxdepth 1 ! -path ./vendor ! -path . -exec mv \{\} vendor/phile-cms/phile/plugins/siezi/phileServeContentFiles \;
+script:
+- vendor/bin/phpunit -c vendor/phile-cms/phile/phpunit.xml  vendor/phile-cms/phile/plugins/siezi/phileServeContentFiles/

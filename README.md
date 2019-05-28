@@ -1,5 +1,7 @@
 # Serve Content Files Plugin for PhileCMS #
 
+[![Build Status](https://travis-ci.org/Schlaefer/phileServeContentFiles.svg?branch=master)](https://travis-ci.org/Schlaefer/phileServeContentFiles)
+
 This plugin tries some magic™ to directly serve additional files from the `content/` directory:
 
 - change HTML output and insert `content/` if it's missing in URLs
